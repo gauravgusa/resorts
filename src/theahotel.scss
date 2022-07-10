@@ -1,0 +1,18 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~@angular/material/_theming";
+
+// Include non-theme styles for core.
+@include mat-core();
+
+// Define a theme.
+$primary: mat-palette($mat-teal, 200);
+$accent: mat-palette($mat-teal, 50);
+
+$theme: mat-light-theme($primary, $accent);
+
+// Include all theme styles for the components.
+@include angular-material-theme($theme);
+
+.navtabs-container {
+  background-color: mat-color($accent);
+}
